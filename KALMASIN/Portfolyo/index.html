@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arel Su Özel | Portfolyo</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Bağlantısı -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Arka Plan Işık Küreleri (Glassmorphism derinliği için) -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Üst Navigasyon -->
+    <header class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">ASÖ<span>.</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hakkimda">Hakkımda</a>
+                <a href="#projeler">Projeler</a>
+                <a href="#yetenekler">Yetenekler</a>
+                <a href="#iletisim">İletişim</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menüyü Aç">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Bölümü -->
+        <section id="hakkimda" class="hero-section">
+            <div class="glass-card hero-card">
+                <span class="badge">Yeni Medya & İletişim • Görsel Hikaye Anlatımı</span>
+                <h1>Merhaba, ben <span class="highlight">Arel Su Özel</span>.</h1>
+                <p>
+                    Dijital tasarım, marka kimliği, fotoğrafçılık, video prodüksiyon ve kullanıcı deneyimi odaklı projeler üreten bir Yeni Medya ve İletişim öğrencisiyim.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projeler" class="btn btn-primary">Çalışmalarımı İncele</a>
+                    <a href="#iletisim" class="btn btn-secondary">İletişime Geç</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projeler Bölümü -->
+        <section id="projeler" class="section-container">
+            <h2 class="section-title">Çalıştığım Projeler</h2>
+            
+            <!-- Filtre Butonları -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="ux">UI/UX & Marka</button>
+                <button class="filter-btn" data-filter="video">Video & Fotoğraf</button>
+                <button class="filter-btn" data-filter="kampanya">Dijital Kampanya</button>
+            </div>
+
+            <!-- Proje Kartları -->
+            <div class="projects-grid">
+                <article class="glass-card project-card" data-category="ux">
+                    <div class="project-tag">UI/UX & Sosyal Etki</div>
+                    <h3>KALMASIN</h3>
+                    <p>Yerel işletmeler ile üniversite öğrencilerini buluşturan gıda israfı önleme girişimi ve mobil uygulama konsept tasarımı.</p>
+                    <div class="project-footer">
+                        <span>Figma • Araştırma</span>
+                        <a href="#" class="project-link">Detaylar →</a>
+                    </div>
+                </article>
+
+                <article class="glass-card project-card" data-category="ux">
+                    <div class="project-tag">Marka Kimliği</div>
+                    <h3>FOX Decision Support</h3>
+                    <p>Perakende karar destek sistemi için kurumsal logo tasarımı, görsel kimlik rehberi ve saha kullanıcı araştırması.</p>
+                    <div class="project-footer">
+                        <span>Illustrator • Figma</span>
+                        <a href="#" class="project-link">Detaylar →</a>
+                    </div>
+                </article>
+
+                <article class="glass-card project-card" data-category="video">
+                    <div class="project-tag">Kısa Film & Kurgu</div>
+                    <h3>180° Kuralı ve Süreklilik</h3>
+                    <p>Süreklilik kurgusu teknikleri ve bilinçli aks ihlalleri üzerine kurgulanmış deneysel kısa film prodüksiyonu.</p>
+                    <div class="project-footer">
+                        <span>Premiere Pro • Prodüksiyon</span>
+                        <a href="#" class="project-link">Detaylar →</a>
+                    </div>
+                </article>
+
+                <article class="glass-card project-card" data-category="video">
+                    <div class="project-tag">Görsel Hikaye Anlatımı</div>
+                    <h3>Growing Up with Music</h3>
+                    <p>Müziğin büyüme sürecindeki izlerini 16 karelik fotoğraf serisiyle anlatan belgesel nitelikli görsel hikaye projesi.</p>
+                    <div class="project-footer">
+                        <span>DSLR • Photoshop</span>
+                        <a href="#" class="project-link">Detaylar →</a>
+                    </div>
+                </article>
+
+                <article class="glass-card project-card" data-category="kampanya">
+                    <div class="project-tag">Dijital Pazarlama</div>
+                    <h3>#FentyForFuture & Wear the Change</h3>
+                    <p>Sürdürülebilir tekstil ve kozmetik odağında çok platformlu dijital iletişim stratejisi ve görsel içerik üretimi.</p>
+                    <div class="project-footer">
+                        <span>Strateji • Sosyal Medya</span>
+                        <a href="#" class="project-link">Detaylar →</a>
+                    </div>
+                </article>
+
+                <article class="glass-card project-card" data-category="video">
+                    <div class="project-tag">Video Makale</div>
+                    <h3>Dijital Nostalji & Egzonostalji</h3>
+                    <p>Sosyal medya platformlarındaki nostalji kültürünü inceleyen 12 dakikalık etnografik video makale.</p>
+                    <div class="project-footer">
+                        <span>Araştırma • Kurgu</span>
+                        <a href="#" class="project-link">Detaylar →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Yetenekler & Araçlar Bölümü -->
+        <section id="yetenekler" class="section-container">
+            <h2 class="section-title">Uzmanlık & Araçlar</h2>
+            <div class="skills-grid">
+                <div class="glass-card skill-box">
+                    <h3>Tasarım & Arayüz</h3>
+                    <div class="tags">
+                        <span>Figma</span>
+                        <span>Adobe Illustrator</span>
+                        <span>Adobe Photoshop</span>
+                        <span>Marka Kimliği</span>
+                        <span>Tipografi</span>
+                    </div>
+                </div>
+                <div class="glass-card skill-box">
+                    <h3>Prodüksiyon & Medya</h3>
+                    <div class="tags">
+                        <span>Adobe Premiere Pro</span>
+                        <span>DSLR Fotoğrafçılık</span>
+                        <span>Video Kurgu</span>
+                        <span>Görsel Hikaye Anlatımı</span>
+                        <span>Dijital Kampanya</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim Bölümü -->
+        <section id="iletisim" class="section-container">
+            <div class="glass-card contact-card">
+                <h2>Birlikte Üretelim</h2>
+                <p>Yeni projeler, iş birlikleri veya portfolyo detayları için bana ulaşabilirsin.</p>
+                <div class="contact-links">
+                    <a href="mailto:ornek@email.com" class="btn btn-primary">E-posta Gönder</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+                    <a href="https://behance.net" target="_blank" rel="noopener" class="btn btn-secondary">Behance</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arel Su Özel. GitHub Pages üzerinde barındırılmaktadır.</p>
+    </footer>
+
+    <!-- JS Bağlantısı -->
+    <script src="script.js"></script>
+</body>
+</html>
