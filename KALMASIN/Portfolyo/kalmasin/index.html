@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALMASIN | İsraf Yok, Lezzet Çok • Bornova Küçükpark</title>
+    <!-- Google Fonts: Syne (Bold & Akılda Kalıcı Başlıklar) + Plus Jakarta Sans (Okunaklı Metinler) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hareketli Glassmorphism Arka Plan Küreleri -->
+    <div class="ambient-bg">
+        <div class="orb orb-blue"></div>
+        <div class="orb orb-cyan"></div>
+        <div class="orb orb-amber"></div>
+    </div>
+
+    <!-- Üst Navigasyon (Glass Navbar) -->
+    <header class="glass-navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-dot"></span>KALMASIN
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hakkinda" data-i18n="nav_about">Proje & Kent Hakkı</a>
+                <a href="#nasil-calisir" data-i18n="nav_how">Nasıl Çalışır?</a>
+                <a href="#ayricaliklar" data-i18n="nav_perks">ResQ Club & Oyunlar</a>
+                <a href="#etki" data-i18n="nav_impact">Saha & Ekip</a>
+                <a href="#sss" data-i18n="nav_faq">SSS</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="lang-btn" id="langToggle" aria-label="Dil Değiştir">EN</button>
+                <a href="#katil" class="btn-nav-cta" data-i18n="nav_join">Bize Katıl</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menü">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO BÖLÜMÜ (Basic Anlatım + İki Ana Rol Butonu + Canlı App Mockup) -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <div class="location-pill">
+                        <span class="pulse-dot"></span>
+                        <span data-i18n="hero_badge">Bornova Küçükpark • İzmir Kent Konseyi Paydaşlığı</span>
+                    </div>
+
+                    <h1 class="hero-title" data-i18n="hero_title">
+                        İsraf yok, <span class="gradient-text">lezzet çok.</span>
+                    </h1>
+
+                    <p class="hero-subtitle" data-i18n="hero_desc">
+                        Küçükpark’taki yerel işletmelerin gün sonunda taze kalan ürünlerini üniversite öğrencileriyle uygun koşullarda buluşturan yeni nesil topluluk ve gıda kurtarma ağı. <strong>Taze yakala, ziyan etme.</strong>
+                    </p>
+
+                    <!-- İstenen İki Ana Yönlendirme Butonu -->
+                    <div class="dual-role-cta">
+                        <a href="#nasil-calisir" class="btn-role btn-student" data-role-select="student">
+                            <span class="role-icon">🎓</span>
+                            <div>
+                                <strong data-i18n="btn_users">Kullanıcılar için KALMASIN</strong>
+                                <small data-i18n="btn_users_sub">Sürpriz paketleri yakala, ödül kazan</small>
+                            </div>
+                        </a>
+                        <a href="#nasil-calisir" class="btn-role btn-business" data-role-select="business">
+                            <span class="role-icon">🏪</span>
+                            <div>
+                                <strong data-i18n="btn_business">İşletmeler için KALMASIN</strong>
+                                <small data-i18n="btn_business_sub">Gün sonu fazlasını kazanca dönüştür</small>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="slogan-ticker">
+                        <span>✦ Son şans, sıfır atık</span>
+                        <span>✦ Taze yakala, ziyan etme</span>
+                        <span>✦ Küçükpark'ın ortak sofrası</span>
+                    </div>
+                </div>
+
+                <!-- Hero İnteraktif Telefon Mockup -->
+                <div class="hero-visual reveal">
+                    <div class="phone-mockup glass-panel">
+                        <div class="phone-notch"></div>
+                        <div class="phone-header">
+                            <div>
+                                <small>📍 Bornova, Küçükpark</small>
+                                <h4>Akşam Fırsatları</h4>
+                            </div>
+                            <span class="club-badge">GOLD ÜYE ★</span>
+                        </div>
+
+                        <!-- Akşam Saati Özel Bildirim Kartı -->
+                        <div class="notif-banner">
+                            <span class="notif-icon">🔔</span>
+                            <div>
+                                <strong>20:30 Son Şans Bildirimi!</strong>
+                                <p>Küçükpark Fırın & Kafe'de 3 taze sürpriz kutu açıldı.</p>
+                            </div>
+                        </div>
+
+                        <!-- Uygulama İçi Ürün Kartı -->
+                        <div class="app-deal-card">
+                            <div class="deal-top">
+                                <span class="deal-tag">Son 2 Paket</span>
+                                <span class="deal-timer" id="phoneCountdown">01:44:29</span>
+                            </div>
+                            <h5>Artizan Sandviç & Tatlı Kutusu</h5>
+                            <p>Küçükpark Meydan • 180m uzaklıkta</p>
+                            <div class="deal-price-row">
+                                <div>
+                                    <span class="old-price">₺240</span>
+                                    <span class="new-price">₺85</span>
+                                </div>
+                                <button class="mini-grab-btn" id="demoGrabBtn">Hemen Ayırt</button>
+                            </div>
+                        </div>
+
+                        <!-- Mini İlerleme Çubuğu -->
+                        <div class="resq-progress">
+                            <div class="progress-info">
+                                <span>ResQ Club Seviyesi: <strong>Gold</strong></span>
+                                <span>14/15 Kurtarma</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PROJE HAKKINDA & PROBLEM / ÇÖZÜM (Açık Buzlu Yüzey Kontrastı) -->
+        <section id="hakkinda" class="section-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow" data-i18n="about_eyebrow">BİR İNDİRİM UYGULAMASINDAN FAZLASI</span>
+                    <h2 data-i18n="about_title">Küçükpark’ta Kent Hakkı ve Sıfır Atık</h2>
+                    <p data-i18n="about_lead">
+                        KALMASIN, gıda israfını yalnızca ticari bir indirim kurgusuyla değil; öğrencilerin sağlıklı, nitelikli gıdaya erişimini <strong>Kent Hakkı</strong> temelinde savunan katılımcı bir yerel dayanışma modeliyle çözer.
+                    </p>
+                </div>
+
+                <div class="problem-solution-grid">
+                    <div class="glass-card-light reveal">
+                        <div class="card-icon red-glow">⚠️</div>
+                        <h3 data-i18n="prob_title">Problem: Gün Sonu Gıda Fazlası</h3>
+                        <p data-i18n="prob_desc">
+                            Bornova Küçükpark’taki kafe, fırın ve yerel restoranlarda her akşam kapanış saatinde yüksek kalitede taze ürün satılamadığı için çöpe gitme riskiyle karşılaşıyor; öğrenciler ise artan yaşam maliyetleri altında nitelikli gıdaya ulaşmakta zorlanıyor.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-light reveal">
+                        <div class="card-icon blue-glow">💧</div>
+                        <h3 data-i18n="sol_title">Çözüm: Yerel & Şeffaf Eşleşme</h3>
+                        <p data-i18n="sol_desc">
+                            Esnaf kapanışa 1–2 saat kala kalan ürünlerini tek dokunuşla "Sürpriz Kutu" veya net içerikli paket olarak listeler. Öğrenciler bildirimle yakalar, uygulama üzerinden ayırtır ve dükkândan teslim alır. <strong>Son şans, sıfır atık.</strong>
+                        </p>
+                    </div>
+
+                    <div class="glass-card-light reveal">
+                        <div class="card-icon amber-glow">🏛️</div>
+                        <h3 data-i18n="civic_title">İzmir Kent Konseyi Paydaşlığı</h3>
+                        <p data-i18n="civic_desc">
+                            Yaşar Üniversitesi Yeni Medya ve İletişim bölümü bünyesinde geliştirilen proje, İzmir Kent Konseyi paydaşlığıyla saha araştırmalarına dayanarak yerel yönetişim, esnaf kültürü ve gençlik katılımını bir araya getirir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. NASIL ÇALIŞIR? (İnteraktif Öğrenci / Esnaf Sekmeleri) -->
+        <section id="nasil-calisir" class="section-dark">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">ADIM ADIM AKIŞ</span>
+                    <h2 data-i18n="how_title">KALMASIN Nasıl Çalışır?</h2>
+                    <p data-i18n="how_sub">Rolünü seç ve Küçükpark’taki döngünün nasıl işlediğini keşfet.</p>
+                </div>
+
+                <!-- Sekme Butonları -->
+                <div class="tabs-wrapper reveal">
+                    <button class="tab-btn active" data-tab="student" data-i18n="tab_student">🎓 Öğrenciler & Kullanıcılar İçin</button>
+                    <button class="tab-btn" data-tab="business" data-i18n="tab_business">🏪 Küçükpark Esnafı İçin</button>
+                </div>
+
+                <!-- Öğrenci Akışı -->
+                <div class="tab-content active" id="tab-student">
+                    <div class="steps-grid">
+                        <div class="glass-panel step-card">
+                            <span class="step-num">01</span>
+                            <h4>Akşam Bildirimini Yakala</h4>
+                            <p>20:00–23:00 arası favori Küçükpark mekânlarında taze paket açıldığında anlık bildirim al.</p>
+                        </div>
+                        <div class="glass-panel step-card">
+                            <span class="step-num">02</span>
+                            <h4>Paketi Seç & Ayırt</h4>
+                            <p>Süreli kuponunu veya ResQ Club ayrıcalığını kullanarak saniyeler içinde rezervasyonunu tamamla.</p>
+                        </div>
+                        <div class="glass-panel step-card">
+                            <span class="step-num">03</span>
+                            <h4>QR Kod ile Teslim Al</h4>
+                            <p>Belirlenen saat aralığında işletmeye uğra, QR kodunu okut ve taze yemeğini sıraya girmeden al.</p>
+                        </div>
+                        <div class="glass-panel step-card">
+                            <span class="step-num">04</span>
+                            <h4>Puan Topla & Seviye Atla</h4>
+                            <p>Her kurtardığın öğünle karbon ayak izini azalt, Silver ve Gold üye ayrıcalıklarının kilidini aç.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Esnaf Akışı -->
+                <div class="tab-content" id="tab-business">
+                    <div class="steps-grid">
+                        <div class="glass-panel step-card">
+                            <span class="step-num">01</span>
+                            <h4>30 Saniyede Paket Tanımla</h4>
+                            <p>Kapanışa yakın elde kalan taze ürün adedini ve teslim saat aralığını esnaf panelinden gir.</p>
+                        </div>
+                        <div class="glass-panel step-card">
+                            <span class="step-num">02</span>
+                            <h4>Mahalle Öğrencilerine Ulaş</h4>
+                            <p>Küçükpark çevresindeki yüzlerce aktif öğrenciye konum bazlı anlık bildirim otomatik gönderilsin.</p>
+                        </div>
+                        <div class="glass-panel step-card">
+                            <span class="step-num">03</span>
+                            <h4>Hızlı QR Teslimatı</h4>
+                            <p>Müşteri dükkâna geldiğinde uygulama ekranındaki QR kodu onayla; paketleme ve servis yükü olmadan teslim et.</p>
+                        </div>
+                        <div class="glass-panel step-card">
+                            <span class="step-num">04</span>
+                            <h4>Maliyeti Kurtar, Görünür Ol</h4>
+                            <p>Çöpe gidecek ürünlerden ek gelir elde et ve "Sıfır Atık Dostu İşletme" rozetiyle yeni müdavimler kazan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. KULLANICI AYRICALIKLARI & OYUNLAŞTIRMA (İnteraktif Çark, Kazı Kazan, ResQ Club) -->
+        <section id="ayricaliklar" class="section-dark">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">OYUNLAŞTIRILMIŞ DENEYİM & RESQ CLUB</span>
+                    <h2>Kurtardıkça Kazan, Eğlenerek Paylaş</h2>
+                    <p>Gen Z için sıkıcı indirim listeleri yerine etkileşimli mini oyunlar, akşam sürprizleri ve kademeli üyelik ayrıcalıkları.</p>
+                </div>
+
+                <!-- Üst Özellik Kartları -->
+                <div class="perks-overview-grid reveal">
+                    <div class="glass-panel perk-mini-card">
+                        <div class="perk-icon">🌙</div>
+                        <h4>Akşam Özel Bildirimleri</h4>
+                        <p>20:30 "Mutlu Saatler" alarmı ile kampüs çıkışı en taze paketler ilk senin ekranına düşer.</p>
+                    </div>
+                    <div class="glass-panel perk-mini-card">
+                        <div class="perk-icon">⏳</div>
+                        <h4>Süreli Flaş Kuponlar</h4>
+                        <p>Son 45 dakikaya giren paketlerde ekstra %15 ani indirim kodları ve arkadaş daveti bonusları.</p>
+                    </div>
+                    <div class="glass-panel perk-mini-card">
+                        <div class="perk-icon">🎮</div>
+                        <h4>Uygulama İçi Mini Games</h4>
+                        <p>"Taze Yakala" refleks oyunu ve günlük giriş serileriyle ekstra kurtarma puanı biriktir.</p>
+                    </div>
+                </div>
+
+                <!-- İnteraktif Oyun Alanı: Şans Çarkı + Kazı Kazan -->
+                <div class="gamification-arena reveal">
+                    <!-- Şans Çarkı Modülü -->
+                    <div class="glass-panel game-box">
+                        <div class="game-header">
+                            <span class="game-badge">CANLI DEMO</span>
+                            <h3>🎡 KALMASIN Şans Çarkı</h3>
+                            <p>Günde 1 kez çevir, akşamki siparişine ekstra indirim veya ücretsiz kahve yakala!</p>
+                        </div>
+
+                        <div class="wheel-container">
+                            <div class="wheel-pointer">▼</div>
+                            <div class="wheel" id="spinWheel">
+                                <div class="wheel-segment" style="--i:0;"><span>%20 İndirim</span></div>
+                                <div class="wheel-segment" style="--i:1;"><span>Ücretsiz Çay</span></div>
+                                <div class="wheel-segment" style="--i:2;"><span>+50 Puan</span></div>
+                                <div class="wheel-segment" style="--i:3;"><span>₺25 Kupon</span></div>
+                                <div class="wheel-segment" style="--i:4;"><span>2x Puan</span></div>
+                                <div class="wheel-segment" style="--i:5;"><span>Sürpriz Tatlı</span></div>
+                            </div>
+                        </div>
+
+                        <button class="btn-primary-glow" id="spinBtn">Çarkı Çevir</button>
+                        <p class="game-result" id="wheelResult">Şansını denemek için butona dokun!</p>
+                    </div>
+
+                    <!-- Kazı Kazan Modülü -->
+                    <div class="glass-panel game-box">
+                        <div class="game-header">
+                            <span class="game-badge">PARMAĞINLA / FAREYLE KAZI</span>
+                            <h3>🎫 Akşam Kazı-Kazan Kartı</h3>
+                            <p>Sipariş sonrası açılan dijital kartı kazı, Küçükpark esnafından anında ödül kazan.</p>
+                        </div>
+
+                        <div class="scratch-wrapper">
+                            <div class="scratch-secret">
+                                <span class="secret-emoji">🥐</span>
+                                <strong id="scratchPrizeText">KÜÇÜKPARK20</strong>
+                                <small>Sonraki pakette anında ₺20 indirim!</small>
+                            </div>
+                            <canvas id="scratchCanvas" width="280" height="160"></canvas>
+                        </div>
+
+                        <button class="btn-secondary-glass" id="resetScratchBtn">Yeni Kart Al</button>
+                        <p class="game-result" id="scratchStatus">Gümüş alanı kazıyarak ödülünü ortaya çıkar.</p>
+                    </div>
+                </div>
+
+                <!-- ResQ Club Üyelik Seviyeleri -->
+                <div class="resq-tiers-wrapper reveal">
+                    <h3 class="tiers-title">🏆 ResQ Club Sadakat Seviyeleri</h3>
+                    <div class="tiers-grid">
+                        <div class="glass-panel tier-card tier-starter">
+                            <div class="tier-header">
+                                <span class="tier-badge">STARTER</span>
+                                <h4>Yeni Kurtarıcı</h4>
+                            </div>
+                            <p class="tier-req">0 – 4 Paket Kurtarma</p>
+                            <ul>
+                                <li>✓ Standart akşam bildirimleri</li>
+                                <li>✓ Günlük 1 Şans Çarkı hakkı</li>
+                                <li>✓ Temel karbon etki rozeti</li>
+                            </ul>
+                        </div>
+
+                        <div class="glass-panel tier-card tier-silver">
+                            <div class="tier-header">
+                                <span class="tier-badge">SILVER ÜYE</span>
+                                <h4>Mahalle Müdavimi</h4>
+                            </div>
+                            <p class="tier-req">5 – 14 Paket Kurtarma</p>
+                            <ul>
+                                <li>✓ Bildirimlere <strong>10 dk erken erişim</strong></li>
+                                <li>✓ Haftalık ekstra Kazı-Kazan kartı</li>
+                                <li>✓ Seçili kafelerde ücretsiz içecek yükseltmesi</li>
+                            </ul>
+                        </div>
+
+                        <div class="glass-panel tier-card tier-gold">
+                            <div class="tier-header">
+                                <span class="tier-badge">GOLD ÜYE ★</span>
+                                <h4>Sıfır Atık Elçisi</h4>
+                            </div>
+                            <p class="tier-req">15+ Paket Kurtarma</p>
+                            <ul>
+                                <li>✓ <strong>VIP 20 dk öncelikli</strong> rezervasyon hakkı</li>
+                                <li>✓ Her 5. pakette %50 ekstra süreli kupon</li>
+                                <li>✓ İzmir Kent Konseyi sıfır atık etkinlik davetiyesi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SAHA ARAŞTIRMASI, SOSYAL ETKİ & EKİP (Açık Yüzey Kontrastı) -->
+        <section id="etki" class="section-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">VERİYE DAYALI TASARIM & PAYDAŞLIK</span>
+                    <h2>Saha Araştırması ve Sosyal Etki</h2>
+                    <p>Bornova Küçükpark’ta esnaf ve öğrencilerle gerçekleştirilen yarı yapılandırılmış görüşmeler ve saha analizlerinden elde edilen bulgular.</p>
+                </div>
+
+                <div class="stats-grid reveal">
+                    <div class="glass-card-light stat-card">
+                        <span class="stat-number">%65</span>
+                        <h4>Ekonomik Erişim</h4>
+                        <p>Görüşülen öğrencilerin öncelikli motivasyonu uygun fiyatlı, sıcak ve güvenilir akşam öğününe erişim.</p>
+                    </div>
+                    <div class="glass-card-light stat-card">
+                        <span class="stat-number">20:30</span>
+                        <h4>Kritik Kapanış Penceresi</h4>
+                        <p>Küçükpark işletmelerinde taze ürün fazlasının en yoğun oluştuğu ve bildirim etkileşiminin zirve yaptığı saat.</p>
+                    </div>
+                    <div class="glass-card-light stat-card">
+                        <span class="stat-number">100%</span>
+                        <h4>Yerel & Şeffaf Güven</h4>
+                        <p>Kullanıcılar belirsiz içerikler yerine alerjen bilgisi ve kategori etiketi netleştirilmiş paketleri tercih ediyor.</p>
+                    </div>
+                </div>
+
+                <!-- Ekip & Paydaşlar -->
+                <div class="team-stakeholders-grid reveal">
+                    <div class="glass-card-light team-card">
+                        <span class="eyebrow">PROJE EKİBİ</span>
+                        <h3>Üretici Tasarım & İletişim Ekibi</h3>
+                        <div class="team-members">
+                            <div class="member-pill">
+                                <div class="avatar">AS</div>
+                                <div>
+                                    <strong>Arel Su Özel</strong>
+                                    <small>UI/UX Tasarım, Görsel Kimlik & Marka Stratejisi</small>
+                                </div>
+                            </div>
+                            <div class="member-pill">
+                                <div class="avatar">BÖ</div>
+                                <div>
+                                    <strong>Bensu Özdemir</strong>
+                                    <small>Saha Araştırması, Paydaş İletişimi & İçerik Stratejisi</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card-light team-card">
+                        <span class="eyebrow">AKADEMİK & KURUMSAL PAYDAŞLAR</span>
+                        <h3>Güçlü Yerel İş Birliği</h3>
+                        <ul class="partner-list">
+                            <li>
+                                <strong>🎓 Yaşar Üniversitesi</strong>
+                                <span>Yeni Medya ve İletişim Bölümü • NMED 4201 Bitirme Projesi</span>
+                            </li>
+                            <li>
+                                <strong>🏛️ İzmir Kent Konseyi</strong>
+                                <span>Kent Hakkı, Gençlik Katılımı ve Sürdürülebilir Kent Politikaları Paydaşı</span>
+                            </li>
+                            <li>
+                                <strong>📍 Bornova Küçükpark Esnafı</strong>
+                                <span>Yerel kafe, fırın ve bağımsız yeme-içme işletmeleri ekosistemi</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SIKÇA SORULAN SORULAR (Akordeon Menü) -->
+        <section id="sss" class="section-dark">
+            <div class="container narrow-container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">MERAK EDİLENLER</span>
+                    <h2>Sıkça Sorulan Sorular</h2>
+                </div>
+
+                <div class="accordion reveal">
+                    <div class="accordion-item glass-panel">
+                        <button class="accordion-header">
+                            <span>KALMASIN’daki ürünler bayat mı?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p>Kesinlikle hayır. Sistemdeki tüm ürünler o gün taze üretilmiş ancak işletmenin kapanış saatine yakın satılamadığı için ertesi güne devredilemeyen nitelikli gıdalardan oluşur. <strong>Taze yakala, ziyan etme.</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item glass-panel">
+                        <button class="accordion-header">
+                            <span>Küçükpark’taki işletmemi sisteme nasıl dahil edebilirim?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p>Aşağıdaki erken erişim formundan "İşletme / Esnaf" seçeneğini işaretleyerek bilgilerini bırakabilirsin. Saha ekibimiz Bornova Küçükpark’taki işletmeni ziyaret ederek kurulumu ücretsiz tamamlar.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item glass-panel">
+                        <button class="accordion-header">
+                            <span>ResQ Club Gold üyeliği nasıl kazanılır?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p>Uygulama üzerinden 15 paket kurtardığında veya arkadaş davet görevlerini tamamladığında otomatik olarak Gold Üye statüsüne geçersin ve akşam bildirimlerini herkesten 20 dakika önce alırsın.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. İLETİŞİM & ERKEN ERİŞİM FORMU -->
+        <section id="katil" class="section-dark">
+            <div class="container narrow-container">
+                <div class="glass-panel cta-form-box reveal">
+                    <span class="eyebrow">HAREKETE KATIL</span>
+                    <h2>Bornova’da İsrafı Birlikte Durduralım</h2>
+                    <p>Erken erişim listesine kaydol; ister öğrenci olarak ilk bildirimleri yakala, ister Küçükpark esnafı olarak ağımıza katıl.</p>
+
+                    <form id="joinForm" class="join-form">
+                        <div class="form-row">
+                            <input type="text" id="userName" placeholder="Adın Soyadın / İşletme Adı" required>
+                            <input type="email" id="userEmail" placeholder="E-posta Adresin" required>
+                        </div>
+                        <div class="form-row">
+                            <select id="userRole" required>
+                                <option value="" disabled selected>Katılım Türünü Seç</option>
+                                <option value="student">🎓 Öğrenci / Kullanıcı (Paket Yakalamak İstiyorum)</option>
+                                <option value="business">🏪 Küçükpark Esnafı (İşletmemi Eklemek İstiyorum)</option>
+                                <option value="partner">🏛️ Kurumsal Paydaş / Gönüllü</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary-glow full-width">Erken Erişime Katıl →</button>
+                    </form>
+
+                    <!-- JS Onay Mesajı -->
+                    <div id="formSuccessMessage" class="form-success hidden">
+                        🎉 Harika! Kaydın alındı. Bornova Küçükpark’ta <strong>#İsrafYokLezzetÇok</strong> hareketine hoş geldin!
+                    </div>
+
+                    <div class="social-bar">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <span>•</span>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <span>•</span>
+                        <a href="mailto:iletisim@kalmasin.org">iletisim@kalmasin.org</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p>© 2026 <strong>KALMASIN</strong> • Bornova Küçükpark, İzmir. Yaşar Üniversitesi & İzmir Kent Konseyi Paydaşlığıyla.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
